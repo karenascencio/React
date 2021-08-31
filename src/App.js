@@ -1,34 +1,30 @@
 import React, { Component } from 'react'
-import logo from './logo.svg';
 import './App.css';
+
+import CustomHeading from './Components/CustomHeading';
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      stage: ""
+      title: "Hello Kodersssss!"
     }
-    this.setStage = this.setStage.bind( this )
+    this.changeHandler = this.changeHandler.bind( this )
   }
 
-  setStage( event ){
-    const value = event.target.value
-    console.log(value)
-    this.setState({ stage: value})
+  changeHandler( event ){
+    const text = event.target.value
+    console.log(text)
+    this.setState({ title: text})
   }
 
   render(){
     return(
       <React.Fragment>
-        <input className="control" type="radio" name="stage" value="go" onClick={this.setStage}/>
-        <label for="" >Go</label>
-        <input className="control" type="radio" name="stage" value="caution" onClick={this.setStage}/>
-        <label for="" >Caution</label>
-        <input className="control" type="radio" name="stage" value="stop" onClick={this.setStage}/>
-        <label for="" >Stop</label>
-        <div className="traffic-light">
-          <div className={`light ${this.state.stage}`}></div>
-        </div>
+        <input type="text" onChange={this.changeHandler}/>
+        <CustomHeading
+          text = { this.state.title ? this.state.title : "Hola Koders!" }
+        />
       </React.Fragment>
     )
   }
