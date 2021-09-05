@@ -1,34 +1,34 @@
-.control{
-  width: 80px;
-  margin-top: 50px;
-}
-.traffic-light{
-  width: 100px;
-  height: 100px;
-  margin-left: 150px;
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #e5989b;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+:root {
+  --main-bg-color: brown;
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-cyan: hsl(189, 41%, 97%);
 }
 
-.traffic-light .light{
-  width: 75px;
-  height: 75px;
-  border-radius: 100%;
-  background-color: antiquewhite;
+*{
+  font-family: 'Space Mono', monospace;
+  box-sizing: border-box;
+}
+.input-sign{
+  position: relative;
+  top: 30px;
+  left: 15px;
 }
 
-.go{
-  background-color: #ccd5ae !important
+.input-text{
+  text-align: right;
 }
 
-.caution{
-  background-color: #f2cc8f !important
+.button-item{
+  width: 40%;
 }
 
-.stop{
-  background-color: #f07167 !important
+@media (min-width:1440px){
+  .button-item{
+    width: 28%;
+  }
 }
 
