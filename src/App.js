@@ -45,14 +45,14 @@ const App = () => {
             Select tip %
           </h3>
           <div>
-            <ButtonGroup className="d-flex flex-wrap">
-              <Button className="button-item m-1" onClick={() => setSelectedTip(5)} active={selectedTip === 5}>5%</Button>
-              <Button className="button-item m-1" onClick={() => setSelectedTip(10)} active={selectedTip === 10}>10%</Button>
-              <Button className="button-item m-1" onClick={() => setSelectedTip(15)} active={selectedTip === 15}>15%</Button>
-              <Button className="button-item m-1" onClick={() => setSelectedTip(25)} active={selectedTip === 25}>25%</Button>
-              <Button className="button-item m-1" onClick={() => setSelectedTip(50)} active={selectedTip === 50}>50%</Button>
-              <Input className="button-item m-1 input-text"onChange={ inputHandlerCustomTip } placeholder="Custom" />
-            </ButtonGroup>
+            <div className="d-flex flex-wrap">
+              <div className="button-item p-2"><Button className="w-100" onClick={() => setSelectedTip(5)} active={selectedTip === 5}>5%</Button></div>
+              <div className="button-item p-2"><Button className="w-100" onClick={() => setSelectedTip(10)} active={selectedTip === 10}>10%</Button></div>
+              <div className="button-item p-2"><Button className="w-100" onClick={() => setSelectedTip(15)} active={selectedTip === 15}>15%</Button></div>
+              <div className="button-item p-2"><Button className="w-100" onClick={() => setSelectedTip(25)} active={selectedTip === 25}>25%</Button></div>
+              <div className="button-item p-2"><Button className="w-100" onClick={() => setSelectedTip(50)} active={selectedTip === 50}>50%</Button></div>
+              <div className="button-item p-2"><Input className="w-100" onChange={ inputHandlerCustomTip } placeholder="Custom" /></div>
+            </div>
           </div>
         </Col>
       </Row>
