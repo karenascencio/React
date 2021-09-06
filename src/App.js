@@ -38,6 +38,8 @@ const App = () => {
 
 
   return(
+    <div className="h-screen flex justify-center items-center bg-lightGrayishCyan">
+    <div className="flex flex-col md:flex-row bg-white p-2 pt-4 pb-4 rounded-2xl">
     <Container>
       <Row>
         <Col>
@@ -88,10 +90,13 @@ const App = () => {
           <Input className="input-text bg-lighterGrayishCyan" onChange={inputHandlerPeople} placeholder={people} />
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <Container className="bg-darkCyan rounded p-4">
-            <Row>
+      </Container>
+      <Container >
+      <Row className="h-full">
+        <Col className="">
+          <Container className="bg-darkCyan rounded-xl p-4 h-full flex flex-col justify-between">
+            <div className="p-2">
+            <Row className="mb-4">
               <Col className="d-flex justify-content-between">
                 <p>
                   Tip amount <br /> <span className="text-muted">/ Person</span> 
@@ -111,18 +116,19 @@ const App = () => {
                 </div>
               </Col>
             </Row>
-            <Row>
+            </div>
+            <Row className="">
               <Col>
-                <button className="w-full bg-darkGrayishCyan" > Reset </button>
+                <button className="w-full bg-darkGrayishCyan p-1" > Reset </button>
               </Col>
             </Row>
           </Container>
         </Col>
       </Row>
     </Container>
+    </div>
+    </div>
   )
-
-
 }
 
 export default App;
