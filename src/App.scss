@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-:root {
-  --main-bg-color: brown;
-  --very-dark-cyan: hsl(183, 100%, 15%);
-  --dark-grayish-cyan: hsl(186, 14%, 43%);
-  --dark-grayish-cyan: hsl(184, 14%, 56%);
-  --light-grayish-cyan: hsl(185, 41%, 84%);
-  --light-grayish-cyan: hsl(189, 41%, 97%);
-}
+
 
 *{
   font-family: 'Space Mono', monospace;
@@ -20,15 +13,26 @@
 
 .input-text{
   text-align: right;
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
 }
+
+.input-text::placeholder{
+    color: hsl(183, 100%, 15%);
+  }
 
 .button-item{
   width: 50%;
 }
 
-@media (min-width:1200px){
+@media (min-width:765px){
   .button-item{
     width: 33%;
   }
+}
+
+button:active{
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
 }
 
