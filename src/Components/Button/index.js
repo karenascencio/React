@@ -5,7 +5,7 @@ export default function Button(props) {
 
 
     return (
-        <button data-percentage={percentage} className="text-white bg-darkCyan w-full p-1 rounded" onClick={clickHandler} >
+        <button data-percentage={percentage} className="text-white text-2xl font-bold bg-darkCyan w-full p-1 rounded" onClick={clickHandler} >
             {percentage}%
         </button>
     )
